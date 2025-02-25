@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block mytitle %}
+    <title>主页（父模板）</title>
+    {% endblock %}
+</head>
+<body>
+
+<a href="/music_index">音乐频道</a>
+<a href="/sports_index">体育频道</a>
+<br>
+
+{% block info %}
+    这是主页
+{% endblock %}
+
+<br>
+
+<h3>有任何问题联系yh</h3>
+
+</body>
+</html>
