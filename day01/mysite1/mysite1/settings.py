@@ -31,7 +31,7 @@ DEBUG = True
 # 2，报错页面
 # False 正式启动模式/上线模式
 
-ALLOWED_HOSTS = []# 请求头Host头判断是否一致，如图DEBUG = False这里要加host
+ALLOWED_HOSTS = []# 请求头Host头判断是否一致，如图DEBUG = False这里要加host,内网ip放这里就可以进行访问
 
 
 # Application definition
