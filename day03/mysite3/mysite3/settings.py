@@ -125,5 +125,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/'#只有url是STATIC_URL中的请求时，才到项目的static目录中找，也就是html中第三种django的静态文件加载方式，更动态
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )#项目生成后在补充，是一个元组
