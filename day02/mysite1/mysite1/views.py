@@ -163,7 +163,7 @@ def test_mycal(request):
         elif op == 'div':
             result = x / y
 
-        return render(request, 'mycal.html', locals())
+        return render(request, 'mycal.html', locals())# 封装当前函数所有变量为一个字典
 
 def base_view(request):
 
