@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Book, Author
 # Register your models here.
+# 将book和author放到admin后台方便查看
 
 class BookManager(admin.ModelAdmin):
     #列表页显示那些字段的列
