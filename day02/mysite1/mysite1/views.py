@@ -102,7 +102,7 @@ def test_html(request):
     # 方案一
     # from django.template import loader
     # t = loader.get_template('test_html.html')
-    # html = t.render()
+    # html = t.render() #将t转换成html字符串
     # return HttpResponse(html)
 
     # 方案二
