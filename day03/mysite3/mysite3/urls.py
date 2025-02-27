@@ -23,5 +23,6 @@ urlpatterns = [
     # http://127.0.0.1:8000/music/index
     path('music/', include('music.urls')),#主路由利用incldue可以转到子路由也就是app
     path('news/', include('news.urls')),
-    path('sport/', include('sport.urls'))
+    path('sport/', include('sport.urls')),
+    path('bookstore/', include('bookstore.urls'))
 ]
