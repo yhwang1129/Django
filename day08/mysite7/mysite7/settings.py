@@ -141,6 +141,7 @@ CACHES ={
     }
 }
 
+#上传资源所在处配置
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
