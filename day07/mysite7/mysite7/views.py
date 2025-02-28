@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.decorators.cache import cache_page
 
-@cache_page(15)
+@cache_page(15)#django自带装饰器，15秒的缓存时间
 def test_cache(request):
 
     t = time.time()
