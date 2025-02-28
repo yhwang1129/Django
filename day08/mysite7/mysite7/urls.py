@@ -29,5 +29,5 @@ urlpatterns = [
     path('make_page_csv', views.make_page_csv),
     path('test_upload', views.test_upload)
 ]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)#上传文件还得再主路由绑定
 
