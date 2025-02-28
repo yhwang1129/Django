@@ -3,7 +3,7 @@ from django.shortcuts import render
 from Note.models import Note
 
 # Create your views here.
-
+# 装饰器的写法固定双def，然后两个return
 def check_login(fn):
     def wrap(request, *args, **kwargs):
         if 'username' not in request.session or 'uid' not in request.session:
