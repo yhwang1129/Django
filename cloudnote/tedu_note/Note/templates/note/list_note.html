@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表页</title>
+</head>
+<body>
+
+
+{% if request.session.username or request.COOKIES.username %}
+    {{ request.session.username|default:request.COOKIES.username }} 的笔记
+    <a href="/note/add">添加新笔记</a> <a href="/index/index">返回首页</a>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>content</th>
+            <th>created_time</th>
+            <th>updated_time</th>
+            <th>操作</th>
+        </tr>
+        {% for note in all_note %}
+            <tr>
+                <td>{{ note.id }}</td>
+                <td>{{ note.title }}</td>
+                <td>{{ note.content }}</td>
+                <td>{{ note.created_time }}</td>
+                <td>{{ note.updated_time }}</td>
+                <td>
+                    <a href="/note/update/{{ note.id }}">更新</a>
+                    <a href="/note/delete?note_id={{ note.id }}">删除</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>请登录以查看笔记。</p>
+{% endif %}
+
+</body>
+</html>
