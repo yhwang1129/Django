@@ -28,7 +28,7 @@ def reg_view(request):
         old_users = User.objects.filter(username=username)
         if old_users:
             return HttpResponse('用户名已注册')
-        #3，插入数据【明文处理密码】
+        #3，插入数据【密文处理密码】
         try:
             user = User.objects.create(username=username, password=password_m)
         except Exception as e:
